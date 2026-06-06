@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods - Expense Tracking System</title>
+    <link rel="stylesheet" href="theStyle.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Expense Tracker</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" id="addExpenseToggle">
+                        <span class="text">Add Expense</span>
+                        <span class="arrow">▼</span>
+                    </a>
+                    <ul class="submenu" id="addExpenseSubmenu">
+                        <li><a href="addFoods.html" class="active">Foods</a></li>
+                        <li><a href="addBills.html">Bills</a></li>
+                        <li><a href="addTransport.html">Transport</a></li>
+                        <li><a href="addEntertainment.html">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="viewExpense.html" class="nav-link">
+                        <span class="text">View Expense</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header class="header">
+                <button class="toggle-btn" id="toggleSidebar">☰</button>
+                <h1>Add Food Expense</h1>
+            </header>
+
+            <div class="form-container">
+                <form id="foodExpenseForm" class="expense-form">
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="restaurant">Restaurant/Store Name *</label>
+                        <input type="text" id="restaurant" name="restaurant" placeholder="e.g., McDonald's, Walmart">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foodType">Type of Food *</label>
+                        <select id="foodType" name="foodType">
+                            <option value="">Select type</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="fastfood">Fast Food</option>
+                            <option value="groceries">Groceries</option>
+                            <option value="cafe">Cafe/Coffee</option>
+                            <option value="delivery">Food Delivery</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount ($) *</label>
+                        <input type="number" id="amount" name="amount" step="0.01" min="0" placeholder="0.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" name="paymentMethod">
+                            <option value="cash">Cash</option>
+                            <option value="credit">Credit Card</option>
+                            <option value="debit">Debit Card</option>
+                            <option value="online">Online Payment</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Additional notes"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Expense</button>
+                        <button type="reset" class="btn btn-secondary">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="theScript.js"></script>
+</body>
+</html>
